@@ -1,0 +1,64 @@
+
+.navbar{
+  background-color: rgb(3, 165, 252);
+}
+
+.navbar .btn:hover{
+  background-color: rgba(255, 255, 255, 0.77);
+  color: black
+}
+.navbar .btn{
+  color:white
+}
+.login-box{
+  width:300px;
+  margin:50px auto;
+  padding:20px;
+  
+}
+.login-heading{
+  font-size: larger;
+  font-weight: bold
+}
+
+.chat-overlay{
+  display: flex;
+
+  width:500px;
+  height:450px;
+  margin:50px auto;
+}
+.chat-box{
+  background-color:rgb(228, 235, 234);
+  width:65%;
+  height: 100%;
+}
+
+.message-box{
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+
+
+.message-input{
+  width: 100%;
+  outline:none;
+  border:none;
+  padding: 5px
+}
+i{
+  align-self: center;
+  font-size:18px;
+  padding: 5px;
+}
+
+.chat-online{
+  display: block;
+  width:35%;
+  height:100%;
+  background-color: whitesmoke
+}
+.message{
+  word-wrap:break-word;
+  max-width: 200px;
+}
