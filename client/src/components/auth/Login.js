@@ -41,7 +41,7 @@ export default class Login extends Component {
                 this.props.history.push('/');
             })
             .catch(err=>{
-
+                console.log(err);
                 this.setState(prevState=>({
 
                     errorMessage:err.response.data.message,
