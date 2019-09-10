@@ -25,7 +25,7 @@ export default class Chat extends Component {
     
 
     loadMessages=()=>{
-        axios.get('http://localhost:3001/chat/messages')
+        axios.get('chat/messages')
             .then(response=>{
                 this.setState({
                     messages:response.data
