@@ -50,7 +50,7 @@ export default class Chat extends Component {
         data.message=this.state.message;
         data.token=localStorage.getItem('jwt');
         this.setState({message:''});
-        axios.post('http://localhost:3001/chat/message',data)
+        axios.post('chat/message',data)
             .then(res=>{
                 this.loadMessages();
             })

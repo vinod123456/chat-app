@@ -32,7 +32,7 @@ export default class Login extends Component {
     onSubmitLogin=(event)=>{
         event.preventDefault();
         let user=this.state.user;
-        axios.post('http://localhost:3001/user/login',user)
+        axios.post('user/login',user)
             .then(token=>{
 
                 localStorage.setItem('jwt',token.data);

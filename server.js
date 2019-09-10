@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
+app.use(express.static(path.join(__dirname, "client", "build")))
 // app.use('/',(req,res)=>{
 //     res.json('helloo');
 // })
@@ -45,7 +46,7 @@ app.use(bodyParser.json());
 app.use('/user',users);
 app.use('/chat',chat);
 
-app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 
 
