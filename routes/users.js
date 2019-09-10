@@ -38,7 +38,7 @@ router.post('/login',(req,res)=>{
             if(!user){}
             const payload={id:user._id,userName:user.userName}
             if(password===user.password){
-                jwt.sign(payload,process.env.SECRETKEY,(err,token)=>{
+                jwt.sign(payload,process.env.SECRET_KEY,(err,token)=>{
                     res.json(token);
                     console.log(token);
                     if(err){

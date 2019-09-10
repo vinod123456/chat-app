@@ -2,7 +2,7 @@ const express=require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose=require('mongoose');
-const path = require("path")
+const path = require("path");
 require('dotenv').config();
 
 const users=require('./routes/users');
@@ -39,11 +39,13 @@ app.use(bodyParser.json());
 // app.use('/',(req,res)=>{
 //     res.json('helloo');
 // })
-app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 
 app.use('/user',users);
 app.use('/chat',chat);
+
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 
