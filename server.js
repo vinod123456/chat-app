@@ -16,6 +16,8 @@ const uri=`mongodb://${user}:${password}@cluster0-shard-00-00-rww8m.mongodb.net:
 const app=express();
 app.use(cors());
 
+//connect to mongo db
+
 mongoose.connect(uri,{ useNewUrlParser: true })
 .then(success=>console.log('MongoDB conneced....'))
 .catch(err=>console.log(err))
