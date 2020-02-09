@@ -14,8 +14,11 @@ export default class Chat extends Component {
             message:''
         }
     }
-
+    
     UNSAFE_componentWillMount(){
+        
+        //to check if user is already logged in. If not redirect to login page
+        
         if(!localStorage.getItem('jwt')){
             this.props.history.push('/login');
         }
@@ -23,6 +26,7 @@ export default class Chat extends Component {
 
     }
     
+    //loading messages if user logged in
 
     loadMessages=()=>{
         axios.get('chat/messages')
@@ -44,6 +48,8 @@ export default class Chat extends Component {
         }
     }
 
+    //post message data to backend after submit
+    
     submit=(event)=>{
         event.preventDefault();
         let data={};
