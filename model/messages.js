@@ -1,6 +1,8 @@
 const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 
+//creating message schema in mongodb
+
 const messagesSchema=new Schema({
     message:{
         type:String,
