@@ -64,6 +64,8 @@ export default class Chat extends Component {
                 console.log(err.response);
             })
     }
+    
+    //component to list messages
 
     renderMessages=()=>{
         // console.log(this.state.messages);
