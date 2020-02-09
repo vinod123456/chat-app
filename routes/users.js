@@ -4,6 +4,7 @@ const jwt=require('jsonwebtoken');
 
 const User=require('../model/user')
 
+//handling new user registration
 
 router.post('/register',(req,res)=>{
     console.log(req.body);
@@ -28,6 +29,8 @@ router.post('/register',(req,res)=>{
             }
         })
 });
+
+// user login
 
 router.post('/login',(req,res)=>{
     let {userName,password}=req.body;
