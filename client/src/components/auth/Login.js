@@ -15,6 +15,8 @@ export default class Login extends Component {
             errorMessage:''
         }
     }
+    
+    //on change of input
 
     onChangeInput=(event)=>{
         event.preventDefault();
@@ -29,6 +31,8 @@ export default class Login extends Component {
         }))
     }
 
+    //posting to server on submit
+    
     onSubmitLogin=(event)=>{
         event.preventDefault();
         let user=this.state.user;
