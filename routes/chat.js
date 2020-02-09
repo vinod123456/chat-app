@@ -4,10 +4,13 @@ const router=express.Router();
 
 const Message=require('../model/messages');
 
+//api endpoint to save new message to db
 
 router.post('/message',(req,res)=>{
     const {token,message}=req.body;
     let userName=''
+    
+    //verify token 
     jwt.verify(token,'secretkey',(err,decoded)=>{
         if(err){
             console.log(err);
@@ -27,6 +30,8 @@ router.post('/message',(req,res)=>{
             res.status(500).json(err);
         })
 })
+
+//endpoint to handle get request for messages
 
 router.get('/messages',(req,res)=>{
     Message.find()
